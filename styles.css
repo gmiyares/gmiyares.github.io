@@ -1,0 +1,132 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px
+}
+
+a {
+  color: #777;
+}
+
+span {
+  display: inline-block;
+}
+
+circle {
+    stroke: white;
+    stroke-width: .5;
+}
+
+circle:hover {
+    stroke: black;
+    stroke-width: .5;
+}
+
+/*color of the water*/ 
+svg {
+  background: #e0ebf5;
+ }
+
+/*nav styling*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #efefef;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav p {
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+    font-size: 13.25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 10px 0px 0px 0px;
+    font-size:20px;
+}
+
+#yearInfo {
+    padding:10px 0px 0px 42px;
+    font-size:14px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 20px;}
+}
+
+/* SIDE NAV STYLING */
+.my-legend .legend-title {
+  padding: 0px 16px 0px 16px;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  }
+.my-legend .legend-scale ul {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  float: left;
+  list-style: none;
+  }
+.my-legend .legend-scale ul li {
+  list-style: none;
+  margin-left: 16px;
+  line-height: 18px;
+  margin-bottom: 2px;
+  }
+.my-legend ul.legend-labels li span {
+  display: block;
+  float: left;
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+  margin-left: 0;
+  }
+.my-legend .legend-source {
+  padding: 0px 16px 0px 16px;
+  font-size: 90%;
+  color: black;
+  clear: both;
+  }
+.my-legend a {
+  color: #777;
+  }
+
+#yearLinks {
+  cursor:pointer;
+  padding: 0px 0px 0px 10px;
+  font-size:14px;
+  }
+
+.yearSelected {
+    color: #cc0000;
+}
+
+.tooltip {
+  pointer-events: none;
+}
+
+.migration-dots {
+  /*uncomment to hide black dots*/
+  fill: none;
+}
+
+.migration-arc,
+.migration-spots {
+  fill: none;
+}
+
+.migration .migration-arc {
+  stroke: #777;
+  stroke-width: 0.5px;
+}

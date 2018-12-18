@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+    <title>Migrant Deaths Map</title>
+
+  </head>
+
+  <body>
+
+    <!-- SIDE NAV CODING (folded)-->
+    <div id="mySidenav" class="sidenav">
+      <p>
+        Since the early 1990s, Dutch NGO 
+        <a href="http://www.unitedagainstracism.org/" target="_blank">United for Intercultural
+        Action (UNITED)</a> has gathered newspaper articles, NGO
+        records, and coast guard reports to collect details of the
+        deaths of migrants traveling to Europe. According to their
+        records, over 34,000 people have perished in the pursuit of
+        a better life since 1993. Though UNITED’s list is incomplete,
+        it paints a vivid picture of an ongoing crisis.
+      </p>
+      <br>
+      <br>
+        <!-- put key here -->
+      <div class='my-legend'>
+        <div class='legend-title'>CAUSE OF DEATH</div>
+        <div class='legend-scale'>
+          <ul class='legend-labels'>
+            <li><span style='background:#b07aa0;opacity:.6;'></span>asphyxiation or suffocation</li>
+            <li><span style='background:#f18e27;opacity:.6;'></span>beating, shooting, or stabbing</li>
+            <li><span style='background:#8eca7d;opacity:.6;'></span>dehydration or starvation</li>
+            <li><span style='background:#4e79a7;opacity:.6;'></span>drowning</li>
+            <li><span style='background:#f8bfd1;opacity:.6;'></span>fall or jump</li>
+            <li><span style='background:#f1ce63;opacity:.6;'></span>fire</li>
+            <li><span style='background:#79706e;opacity:.6;'></span>hit by vehicle or vehicle accident</li>
+            <li><span style='background:#9fcae7;opacity:.6;'></span>hypothermia</li>
+            <li><span style='background:#408b75;opacity:.6;'></span>medical neglect or illness</li>
+            <li><span style='background:#b5982f;opacity:.6;'></span>mine blast</li>
+            <li><span style='background:#e05759;opacity:.6;'></span>suicide</li>
+            <li><span style='background:#bab0ac;opacity:.6;'></span>unknown or other</li>
+          </ul>
+        </div>
+        <div class='legend-source'>
+          Source: <a href="https://github.com/ondata/the-list/blob/master/data/refugeesAndMigrants.csv" target="_blank">UNITED and onData</a>
+          <br>
+          <br>
+          Project by <a href="http://gabriellamiyares.com" target="_blank">Gabriella Miyares</a>, with development help from <a href="http://fantasticole.com" target="_blank">Cole Murphy</a>
+        </div>
+      </div>
+    </div>
+
+    </p>
+
+    </div>
+
+    <div id="main">
+
+      <span style="padding-left:10px;cursor:pointer;transition:margin-left .5s;line-height: 0px;" onclick="toggleNav()">&#9776</span>
+      <span style="padding-left:10px;font-size: 30px;line-height: 0px;">MIGRANT DEATHS //</span><span style="padding: 0px 0px 0px 5px;font-size:20px;color:#777;line-height:0px;">
+      EUROPE-BOUND MIGRANTS, 1993–2017</span>
+      <br>
+      <!-- changing info based on year -->
+      <div id="yearInfo" style="color:#cc0000;">
+      Choose a year.
+      </div>
+      <!-- list of years -->
+      <div id = "yearLinks">
+
+        <span id ="linkTo1993" class="yearLink" style="margin-left:32px;" onclick="show93()">1993</span>
+        <!-- one shown, rest of years folded -->
+        <span id ="linkTo1994" class="yearLink" style="margin-left:10px" onclick="show94()">1994</span>
+        <span id ="linkTo1995" class="yearLink" style="margin-left:10px" onclick="show95()">1995</span>
+        <span id ="linkTo1996" class="yearLink" style="margin-left:10px" onclick="show96()">1996</span>
+        <span id ="linkTo1997" class="yearLink" style="margin-left:10px" onclick="show97()">1997</span>
+        <span id ="linkTo1998" class="yearLink" style="margin-left:10px" onclick="show98()">1998</span>
+        <span id ="linkTo1999" class="yearLink" style="margin-left:10px" onclick="show99()">1999</span>
+        <span id ="linkTo2000" class="yearLink" style="margin-left:10px" onclick="show00()">2000</span>
+        <span id ="linkTo2001" class="yearLink" style="margin-left:10px" onclick="show01()">2001</span>
+        <span id ="linkTo2002" class="yearLink" style="margin-left:10px" onclick="show02()">2002</span>
+        <span id ="linkTo2003" class="yearLink" style="margin-left:10px" onclick="show03()">2003</span>
+        <span id ="linkTo2004" class="yearLink" style="margin-left:10px" onclick="show04()">2004</span>
+        <span id ="linkTo2005" class="yearLink" style="margin-left:10px" onclick="show05()">2005</span>
+        <span id ="linkTo2006" class="yearLink" style="margin-left:10px" onclick="show06()">2006</span>
+        <span id ="linkTo2007" class="yearLink" style="margin-left:10px" onclick="show07()">2007</span>
+        <span id ="linkTo2008" class="yearLink" style="margin-left:10px" onclick="show08()">2008</span>
+        <span id ="linkTo2009" class="yearLink" style="margin-left:10px" onclick="show09()">2009</span>
+        <span id ="linkTo2010" class="yearLink" style="margin-left:10px" onclick="show10()">2010</span>
+        <span id ="linkTo2011" class="yearLink" style="margin-left:10px" onclick="show11()">2011</span>
+        <span id ="linkTo2012" class="yearLink" style="margin-left:10px" onclick="show12()">2012</span>
+        <span id ="linkTo2013" class="yearLink" style="margin-left:10px" onclick="show13()">2013</span>
+        <span id ="linkTo2014" class="yearLink" style="margin-left:10px" onclick="show14()">2014</span>
+        <span id ="linkTo2015" class="yearLink" style="margin-left:10px" onclick="show15()">2015</span>
+        <span id ="linkTo2016" class="yearLink" style="margin-left:10px" onclick="show16()">2016</span>
+        <span id ="linkTo2017" class="yearLink" style="margin-left:10px" onclick="show17()">2017</span>
+      </div>
+
+       <!-- load D3 library -->
+      <script src="d3.v4.min.js"></script>
+       <!-- load topojson -->
+      <script src='worldmap.js'></script>
+      <!-- load javascript -->
+      <script src='app2.js'></script>
+
+    </div>
+
+    <!-- toggle function below (folded) -->
+    <script>
+
+      function toggleNav() {
+        navSize = document.getElementById("mySidenav").style.width;
+        if (navSize == "250px") {
+          return closeNav();
+        } else {
+          return openNav();
+      }
+      }
+
+      function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+
+      }
+
+      function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+      }
+
+    </script>
+
+  </body>
+</html>
